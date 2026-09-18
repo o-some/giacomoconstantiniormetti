@@ -32,3 +32,7 @@ Keine Behauptung über bestandene Live-, Safari-, Endgeräte-, Datenschutz- oder
 2. Kontakt-/Buchungsweg sowie Betreiberinformationen und tatsächliche Angebote eintragen.
 3. Reale Datenschutz-/Rechtstexte für die dann festgelegte Produktion erstellen und fachlich prüfen.
 4. Design freigeben; erst danach öffentliche Bereitstellung auf dem vereinbarten GitHub-/Hosting-Weg.
+
+## Unabhängige statische Prüfung und Korrekturen
+
+Separater Prüfer untersuchte HTML/CSS/JS. Drei Befunde wurden korrigiert: Formular initial gesperrt und erst nach Registrierung des lokalen Handlers aktiviert; Navigation ohne JavaScript bleibt mobil sichtbar; offenes mobiles Menü erhält eine viewportbezogene Maximalhöhe und eigenes vertikales Scrollen. Syntax erneut geprüft. Die Umsetzung dieser Korrekturen wurde statisch geprüft, nicht im Browser ausgeführt.

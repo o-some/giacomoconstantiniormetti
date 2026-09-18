@@ -1,4 +1,5 @@
 'use strict';
+document.documentElement.classList.add('js');
 const menuButton=document.querySelector('.menu-toggle');
 const mobileNav=document.querySelector('#mobile-nav');
 function closeMenu(restoreFocus=false){menuButton.setAttribute('aria-expanded','false');mobileNav.hidden=true;document.body.classList.remove('menu-open');if(restoreFocus)menuButton.focus();}
@@ -12,3 +13,5 @@ document.querySelectorAll('[data-goal]').forEach(link=>link.addEventListener('cl
 let preparedNote='';
 document.querySelector('#entry-form').addEventListener('submit',event=>{event.preventDefault();const data=new FormData(event.currentTarget);const goal=String(data.get('goal')||'');const rhythm=String(data.get('rhythm')||'');const note=String(data.get('note')||'').trim();preparedNote=['MEIN EINSTIEG · IORMETTI CONCEPTS','','Mein Fokus: '+goal,'Mein Rhythmus: '+rhythm,...(note?['Was mir wichtig ist: '+note]:[]),'','Persönliche Gesprächsnotiz. Nicht versendet; kein Termin gebucht.'].join('\n');document.querySelector('#result-copy').textContent=goal+' · '+rhythm+'. Deine Notiz ist bereit zum Herunterladen.';const result=document.querySelector('#entry-result');result.hidden=false;result.focus({preventScroll:true});result.scrollIntoView({behavior:motion.matches?'instant':'smooth',block:'nearest'});});
 document.querySelector('#download-note').addEventListener('click',()=>{if(!preparedNote)return;const url=URL.createObjectURL(new Blob([preparedNote],{type:'text/plain;charset=utf-8'}));const link=document.createElement('a');link.href=url;link.download='Mein-Einstieg-Iormetti-Concepts.txt';document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+
+document.querySelector('#entry-form button[type=submit]').disabled=false;
