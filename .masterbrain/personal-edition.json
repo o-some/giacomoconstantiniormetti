@@ -1,0 +1,29 @@
+{
+  "version": "2.0",
+  "repository": "o-some/giacomoconstantiniormetti",
+  "pages": "https://o-some.github.io/giacomoconstantiniormetti/",
+  "assets": "Three AI-generated likeness portraits/scenes from user-provided photographs; raw photos not published.",
+  "image_tool": "built-in image_gen",
+  "prompts": [
+    [
+      "portrait",
+      "Use case: identity-preserve. Reference images show the SAME consenting adult man, preserve his actual face identity very faithfully: dark tousled short hair, brown eyes, eyebrows, slim face, distinctive eyebrow piercing, subtle moustache and chin stubble, natural slim build. Do not beautify into a different model, do not add muscle mass. Photorealistic premium editorial fitness coaching imagery for Iormetti Concepts. Warm ivory #F2EDE3, oxblood #842417, charcoal palette, subtle silver-gelatin grain, soft directional studio daylight, realistic skin. No text, no logos, no watermarks. Create a vertical 4:5 waist-up studio portrait, face toward camera with calm approachable small smile. Wearing a plain dark oxblood fitted crewneck athletic t-shirt and fine silver chain. Standing relaxed against a subtly textured warm ivory plaster wall, sculptural soft shadow. Head fully visible with generous space above hair, subject centered. High end authentic photographic portrait."
+    ],
+    [
+      "training-personal",
+      "Use case: identity-preserve. Reference images show the SAME consenting adult man, preserve his actual face identity very faithfully: dark tousled short hair, brown eyes, eyebrows, slim face, distinctive eyebrow piercing, subtle moustache and chin stubble, natural slim build. Do not beautify into a different model, do not add muscle mass. Photorealistic premium editorial fitness coaching imagery for Iormetti Concepts. Warm ivory #F2EDE3, oxblood #842417, charcoal palette, subtle silver-gelatin grain, soft directional studio daylight, realistic skin. No text, no logos, no watermarks. Create a landscape 3:2 editorial photograph of this same man in an understated boutique training studio, side three-quarter view looking down calmly while holding one light kettlebell at his side with relaxed straight arm, not performing a complex exercise. Plain oxblood t-shirt, charcoal training trousers. Full body including feet, natural lean proportions. Warm muted gym with limestone plaster and steel equipment, soft window light. No other people."
+    ],
+    [
+      "coach-detail",
+      "Use case: identity-preserve. Reference images show the SAME consenting adult man, preserve his actual face identity very faithfully: dark tousled short hair, brown eyes, eyebrows, slim face, distinctive eyebrow piercing, subtle moustache and chin stubble, natural slim build. Do not beautify into a different model, do not add muscle mass. Photorealistic premium editorial fitness coaching imagery for Iormetti Concepts. Warm ivory #F2EDE3, oxblood #842417, charcoal palette, subtle silver-gelatin grain, soft directional studio daylight, realistic skin. No text, no logos, no watermarks. Create a vertical 4:5 intimate editorial photograph of the same man sitting on a simple gym bench, shown from waist up in three-quarter view looking slightly toward camera with relaxed friendly expression. Charcoal plain athletic t-shirt, subtle silver chain. Hands resting naturally on thighs. Warm ivory textured gym wall background with an out-of-focus oxblood training mat. Natural authentic light, calm confidence."
+    ]
+  ],
+  "motion": [
+    "event-driven parallax",
+    "scroll progress",
+    "staggered reveals",
+    "section gradients",
+    "reduced-motion support"
+  ],
+  "validation": "JS syntax and local assets/anchors passed. Live review pending."
+}

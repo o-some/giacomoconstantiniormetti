@@ -7,6 +7,7 @@ menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('ari
 mobileNav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>closeMenu()));
 document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMenu(true);if(event.key==='Tab'&&!mobileNav.hidden){const links=[menuButton,...mobileNav.querySelectorAll('a')];const first=links[0],last=links[links.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}}});
 window.matchMedia('(min-width:761px)').addEventListener('change',event=>{if(event.matches)closeMenu();});
+document.querySelectorAll('.section h2,.principles article,.steps li,.section-label,.statement-content').forEach(el=>el.classList.add('reveal'));
 const motion=window.matchMedia('(prefers-reduced-motion:reduce)');
 if('IntersectionObserver'in window&&!motion.matches){document.body.classList.add('motion');const revealObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}});},{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));}
 document.querySelectorAll('[data-goal]').forEach(link=>link.addEventListener('click',()=>{document.querySelectorAll('input[name="goal"]').forEach(input=>{input.checked=input.value===link.dataset.goal;});}));
@@ -15,3 +16,33 @@ document.querySelector('#entry-form').addEventListener('submit',event=>{event.pr
 document.querySelector('#download-note').addEventListener('click',()=>{if(!preparedNote)return;const url=URL.createObjectURL(new Blob([preparedNote],{type:'text/plain;charset=utf-8'}));const link=document.createElement('a');link.href=url;link.download='Mein-Einstieg-Iormetti-Concepts.txt';document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);});
 
 document.querySelector('#entry-form button[type=submit]').disabled=false;
+
+// Scroll rendering is event-driven and coalesced into one frame; no scroll hijacking.
+const progressBar=document.querySelector('.reading-progress');
+const pageHeader=document.querySelector('.header');
+const animatedFrames=[...document.querySelectorAll('.portrait-hero,.person-portrait,.training-story-image,.statement')];
+const activeFrames=new Set();
+let scrollFrame=0;
+function renderScroll(){
+  scrollFrame=0;
+  const y=window.scrollY;
+  pageHeader.classList.toggle('scrolled',y>24);
+  if(motion.matches)return;
+  const max=document.documentElement.scrollHeight-window.innerHeight;
+  progressBar.style.transform='scaleX('+Math.max(0,Math.min(1,max>0?y/max:0))+')';
+  const range=window.innerWidth<=760?8:18;
+  const positions=[...activeFrames].map(el=>({el,rect:el.getBoundingClientRect()}));
+  positions.forEach(({el,rect})=>{const phase=(window.innerHeight/2-(rect.top+rect.height/2))/(window.innerHeight+rect.height);el.style.setProperty('--parallax-y',Math.max(-range,Math.min(range,phase*range*2)).toFixed(2)+'px');});
+}
+function queueScroll(){if(!scrollFrame)scrollFrame=requestAnimationFrame(renderScroll);}
+if('IntersectionObserver'in window){
+ const imageObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)activeFrames.add(entry.target);else activeFrames.delete(entry.target);});queueScroll();},{rootMargin:'80px'});
+ animatedFrames.forEach(el=>imageObserver.observe(el));
+ const stepObserver=new IntersectionObserver(entries=>entries.forEach(entry=>entry.target.classList.toggle('in-view',entry.isIntersecting)),{rootMargin:'-25% 0px -25% 0px',threshold:.1});
+ document.querySelectorAll('.steps li').forEach(el=>stepObserver.observe(el));
+}
+window.addEventListener('scroll',queueScroll,{passive:true});
+window.addEventListener('resize',queueScroll,{passive:true});
+window.addEventListener('load',queueScroll,{once:true});
+motion.addEventListener('change',()=>{if(motion.matches){document.body.classList.remove('motion');animatedFrames.forEach(el=>el.style.removeProperty('--parallax-y'));}queueScroll();});
+queueScroll();
