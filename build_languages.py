@@ -8,11 +8,13 @@ for line in (root/'translations-v5.tsv').read_text().splitlines():
  i,en,it=line.split('\t');translations[int(i)]=(en,it)
 unchanged={0,3,4,6,8,11,12,13,26,29,56,59,62,68,92,119,136,151,152,153,168,174,175,177,237}
 assert set(range(len(sources)))==set(translations)|unchanged, set(range(len(sources)))-set(translations)-unchanged
+extras=json.loads((root/'translations-v6.json').read_text())
 original=(root/'template-de.html').read_text()
 (p/'index.html').write_text(original)
 for lang,index in [('en',0),('it',1)]:
  s=BeautifulSoup(original,'html.parser');s.html['lang']=lang
  mapping={sources[i]:values[index] for i,values in translations.items()}
+ mapping.update({key:value[index] for key,value in extras.items()})
  for n in list(s.find_all(string=True)):
   if isinstance(n,Doctype):continue
   t=str(n);trim=t.strip()
