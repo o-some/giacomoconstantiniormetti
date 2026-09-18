@@ -1,0 +1,9 @@
+# Website v5 verification
+
+Added a meal-prep concept (planning, preparation, flexible combinations), original generated food image and nutrition form goal. Full static German, English and Italian editions, shared styles and scripts, hreflang links, accessible copy and localized form status/download content. Translation inventory covers 264 strings, including invariant brand names and numbers. Build script uses template-de.html; Python dependencies: beautifulsoup4.
+
+Checks: JavaScript syntax; all three editions' IDs, anchors, assets, four matching form goals, one H1, language/current-link state and stable counter labels passed. Live GitHub Pages version 5 confirmed. German nutrition section and English offer visually inspected at 1363px. DE→IT→EN language navigation confirmed. Italian and English nutrition form submissions create correctly localized local-only results. Price and duration counters marked complete and displayed 100 and 60. Training image computed object-fit:contain and natural aspect ratio preserved. No nested reveal blocks, no padding animations in process steps, no horizontal overflow at tested desktop width.
+
+Motion: once-only opacity fades, no nested transforms, no mobile scroll-linked image motion, opaque sticky header, all geometry reads before scroll writes, desktop-only small parallax on nonportrait scenes. Counters run once for 1.1 seconds, finish on leaving view/tab hiding, respect reduced-motion changes, expose stable final values to assistive technology. Dismissible coaching dock retained across languages within session.
+
+Limits: no real iPhone/Safari device or frame-time profiling performed; mobile responsive rules and reduced-motion paths implemented but not empirically certified. No backend contact/booking destination exists yet; form remains explicitly local-only. Nutrition scope is agreed beforehand; no invented credentials, testimonials, health guarantees or business metrics added.
