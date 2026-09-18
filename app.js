@@ -21,16 +21,24 @@ document.querySelector('#entry-form button[type=submit]').disabled=false;
 const progressBar=document.querySelector('.reading-progress');
 const pageHeader=document.querySelector('.header');
 const coachingDock=document.querySelector('.coaching-dock');
+let dockDismissed=false;
+try{dockDismissed=sessionStorage.getItem('ic-dock-dismissed')==='1';}catch{}
+coachingDock.querySelector('.dock-close').addEventListener('click',()=>{
+  dockDismissed=true;
+  try{sessionStorage.setItem('ic-dock-dismissed','1');}catch{}
+  coachingDock.classList.remove('is-visible');
+  coachingDock.hidden=true;
+});
 const offerSection=document.querySelector('#angebot');
 const heroSection=document.querySelector('.hero');
-const animatedFrames=[...document.querySelectorAll('.portrait-hero,.person-portrait,.training-story-image,.statement,.value-photo,.track-interlude')];
+const animatedFrames=[...document.querySelectorAll('.portrait-hero,.person-portrait,.statement,.value-photo,.track-interlude')];
 const activeFrames=new Set();
 let scrollFrame=0;
 function renderScroll(){
   scrollFrame=0;
   const y=window.scrollY;
   pageHeader.classList.toggle('scrolled',y>24);
-  const showDock=heroSection.getBoundingClientRect().bottom<0&&offerSection.getBoundingClientRect().top>window.innerHeight*.65&&!document.body.classList.contains('menu-open');
+  const showDock=!dockDismissed&&heroSection.getBoundingClientRect().bottom<0&&offerSection.getBoundingClientRect().top>window.innerHeight*.65&&!document.body.classList.contains('menu-open');
   coachingDock.classList.toggle('is-visible',showDock);
   if(motion.matches)return;
   const max=document.documentElement.scrollHeight-window.innerHeight;

@@ -75,3 +75,37 @@
 @media(max-width:1100px){.desktop-nav{gap:16px;font-size:12px}.header{gap:18px}.header-cta{font-size:12px;padding:12px 15px}.runner-hero.portrait-hero{min-height:660px}.fit-intro .lead{font-size:20px}.price-card{padding:30px}.offer-grid{gap:5%}.offer-intro h2{font-size:4.6vw}.value-copy .lead{font-size:21px}}
 @media(max-width:760px){.runner-hero.portrait-hero{min-height:0;aspect-ratio:4/5;border-radius:3px}.runner-hero img{object-position:65% center}.hero-bottom>p{max-width:none}.fit-section{padding-top:60px;padding-bottom:35px}.fit-intro{display:block;margin-bottom:30px}.fit-intro .lead{margin-top:25px;font-size:21px}.fit-cards,.session-grid{display:block}.fit-cards article+article,.session-grid article+article{margin-top:30px}.fit-cards h3{font-size:32px;margin-top:17px}.fit-cards p,.session-grid p{font-size:16px}.manifesto{padding-top:40px}.value-section{display:flex;flex-direction:column;align-items:stretch;gap:35px;padding-top:20px;padding-bottom:55px}.value-photo{aspect-ratio:5/4}.value-copy h2{font-size:clamp(49px,12vw,78px)}.value-copy .lead{font-size:23px}.value-list dd{font-size:16px}.track-interlude{min-height:400px}.track-copy{padding:90px var(--gutter)}.track-copy>p:last-child{font-size:clamp(43px,10.5vw,75px)}.track-interlude>img{object-position:60% center}.offer-section{padding-top:55px;padding-bottom:60px}.offer-grid{display:block}.offer-intro h2{font-size:clamp(36px,8.3vw,61px)}.offer-intro .lead{font-size:24px}.offer-note{margin-top:27px;margin-bottom:32px}.price-card{padding:28px 22px}.price-card h3{font-size:40px}.price>span:first-child{font-size:112px}.price-card li{font-size:15px}.price-card .button{font-size:13px;padding:16px}.session-section{padding-top:60px}.session-header h2{font-size:clamp(36px,8.8vw,60px)}.session-grid{margin-top:34px}.session-grid h3{font-size:32px}.js .coaching-dock{bottom:max(12px,env(safe-area-inset-bottom));width:calc(100% - 24px);max-width:450px;padding:10px 12px;gap:12px}.coaching-dock strong{font-size:8px}.coaching-dock>div>span{font-size:12px}.coaching-dock>a{font-size:12px;padding:12px}.coaching-dock>a>span{margin-left:8px}.footer{padding-bottom:45px}}
 @media(prefers-reduced-motion:reduce){.runner-hero img,.value-photo img,.track-interlude>img{transform:none!important}.js .coaching-dock{transition:none}.fit-cards article,.session-grid article{transition:none!important}}
+
+/* Edition 4: consistent icons, unobstructed portraits, image-led mobile hero. */
+.arrow-icon{display:inline-block;width:22px;height:22px;flex:0 0 22px;vertical-align:middle}
+.text-link .arrow-icon{width:19px;height:19px;flex-basis:19px}
+.coaching-dock>a{display:inline-flex;align-items:center;justify-content:center;gap:12px}
+.js .coaching-dock{gap:18px;width:570px;padding-right:8px}
+.dock-close{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;padding:11px;border:0;background:none;color:var(--paper);border-radius:50%}
+.dock-close svg{width:22px;height:22px}.dock-close:hover{background:#ffffff18}
+.js .coaching-dock[hidden]{display:none}
+.training-story-image{aspect-ratio:auto;overflow:visible}
+.training-story-image img{width:100%;height:auto;object-fit:contain;transform:none;border-radius:3px}
+.training-story-image figcaption{position:static;display:block;padding:12px 18px}
+.hero h1{font-size:clamp(64px,7.5vw,130px);line-height:.96;margin:36px 0 30px;letter-spacing:-.025em}
+.hero-copy{align-self:center;padding-top:10px}.hero .eyebrow{font-size:10px;letter-spacing:.09em}
+.hero-bottom>p{font-size:19px;line-height:1.6;max-width:360px;margin-bottom:28px}
+.runner-hero.portrait-hero{min-height:590px}.runner-hero img{transform:none;object-position:64% 30%}
+.hero-visual figcaption{border-left:2px solid #ad4937;padding-left:14px}
+@media(max-width:1100px) and (min-width:761px){.hero h1{font-size:7.3vw}.runner-hero.portrait-hero{min-height:550px}}
+@media(max-width:760px){
+ .hero{display:grid;grid-template-columns:minmax(0,1fr);padding-top:24px;row-gap:0}
+ .hero-copy{display:contents}.hero .eyebrow{grid-row:1;font-size:8px;line-height:1.6;gap:12px}.hero .eyebrow span{max-width:130px}
+ .hero h1{grid-row:2;font-size:clamp(46px,12.7vw,88px);line-height:.96;margin:19px 0 23px}
+ .hero-visual.runner-hero{grid-row:3;min-height:0;aspect-ratio:6/5;width:100%;border-radius:2px}
+ .runner-hero img{object-position:64% 20%;transform:none}
+ .hero-visual figcaption{font-size:8px;left:16px;bottom:16px;right:16px;line-height:1.7}
+ .hero-bottom{grid-row:4;padding:23px 0 0;width:100%}.hero-bottom .coach-badge{display:none}
+ .hero-bottom>p{font-size:16px;line-height:1.55;margin-bottom:19px;max-width:340px}
+ .hero-bottom .button{padding:15px 18px;font-size:14px;gap:15px;min-height:54px}
+ .hero-foot{grid-row:5;margin-top:24px}
+ .training-story-image{aspect-ratio:auto}.training-story-image img{height:auto;transform:none}
+ .js .coaching-dock{width:calc(100% - 24px);max-width:450px;gap:8px;padding:9px 6px 9px 12px}
+ .coaching-dock>div{flex:1;min-width:0}.coaching-dock strong{font-size:8px;letter-spacing:.02em}.coaching-dock>a{padding:10px;font-size:11px;gap:7px}.coaching-dock .arrow-icon{width:16px;height:16px;flex-basis:16px}
+ .dock-close{flex-basis:40px;width:40px;height:44px;padding:10px}
+}
