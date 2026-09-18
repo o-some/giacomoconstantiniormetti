@@ -1,0 +1,32 @@
+{
+  "version": "3.0",
+  "offer": "Fitness-Einzelcoaching",
+  "price_eur_per_hour": 100,
+  "minutes_per_hour": 60,
+  "contact_status": "NEEDS_INPUT: email/WhatsApp/booking URL; page explicitly does not submit",
+  "confirmed": [
+    "individual fitness coaching",
+    "100 EUR/hour"
+  ],
+  "editorial_content": "Offer positioning, proposed session flow, FAQ; no testimonials, fabricated credentials, outcome guarantees or scarcity.",
+  "image_prompts": [
+    {
+      "name": "runner-v3",
+      "prompt": "Use case: identity-preserve. Image 1 is the scene and composition reference; image 2 is the consenting adult identity reference. Recreate the powerful professional running photograph from image 1, but the runner must be the SAME man from image 2 with his actual dark spiky hair, slim youthful face, eyebrow piercing, subtle moustache and chin stubble. Match his face very faithfully, not the original runner's face. Natural lean athletic proportions, not bulky. He wears a plain black training t-shirt, black shorts and unbranded shoes. Landscape 3:2 composition, runner full body including shoes, centered slightly right around 60% across, face visible in three quarter view, running toward camera-right, sunlit empty concrete stadium and track. Premium editorial fitness photograph, refined black and white neutral monochrome, deep charcoal shadows, ivory highlights, subtle silver gelatin texture, sculptural directional light. No sepia, no colorful objects, no text or logos. Anatomically realistic. "
+    },
+    {
+      "name": "portrait-v3",
+      "prompt": "Use case: identity-preserve. Create a sophisticated professional fitness coach waist-up portrait of exactly the same adult man in the reference. Faithfully preserve actual face shape, dark spiky hair, eyebrow piercing, facial hair, eyes and lean build. Plain black crewneck performance t-shirt. Relaxed upright standing posture, face toward camera, subtle approachable expression. Vertical 4:5 crop with generous headroom. Beautiful large soft side window light, neutral charcoal studio background fading to medium gray, premium silver-gelatin black and white entirely monochrome. No text, logo, props or extra people. Not fashion glamour, natural coach confidence."
+    },
+    {
+      "name": "strength-detail-v3",
+      "prompt": "Premium editorial fitness photograph, refined black and white neutral monochrome, deep charcoal shadows, ivory highlights, subtle silver gelatin texture, sculptural directional light. No sepia, no colorful objects, no text or logos. Anatomically realistic. Landscape 3:2 macro editorial photograph of an anonymous adult athlete's hand gripping the knurled handle of a black dumbbell, forearm and side of black athletic trousers, cropped anonymous body, chalk dust, dramatic side light in a quiet dark gym. Exact believable five finger anatomy, beautifully composed negative space, tactile steel. A very subtle dark oxblood reflection on equipment is the only color."
+    },
+    {
+      "name": "track-v3",
+      "prompt": "Premium editorial fitness photograph, refined black and white neutral monochrome, deep charcoal shadows, ivory highlights, subtle silver gelatin texture, sculptural directional light. No sepia, no colorful objects, no text or logos. Anatomically realistic. Landscape 3:2 architectural photograph of an empty athletics track curving toward monumental concrete stadium stairs, strong geometric lane lines and long late afternoon shadows, quiet determined atmosphere. A single restrained deep oxblood red lane subtly emerges among mostly monochrome concrete and black-and-white surfaces. No people. High end editorial sports campaign."
+    }
+  ],
+  "motion": "event-driven parallax; reveal; contextual dock; reduced motion CSS and JS",
+  "checks": "syntax, assets, anchors, duplicate IDs passed; live review pending"
+}
