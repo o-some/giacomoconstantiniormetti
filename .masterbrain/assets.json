@@ -1,0 +1,79 @@
+[
+  {
+    "asset": "hero.webp",
+    "source": "hero-runner.png",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "sha256": "1341df034c161946dd343c54d5a1bdb54de97c905f03620dad2d3e596fb1f3f8",
+    "type": "AI-generated illustrative asset; not customer portrait",
+    "bytes": 190574
+  },
+  {
+    "asset": "training.webp",
+    "source": "strength-woman.png",
+    "dimensions": [
+      1122,
+      1402
+    ],
+    "sha256": "cb6716ed2115601224918cf52e55bf9ca4faa5392b4e1994e42874807fa03155",
+    "type": "AI-generated illustrative asset; not customer portrait",
+    "bytes": 125866
+  },
+  {
+    "asset": "chalk.webp",
+    "source": "chalk-hands-v2.png",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "sha256": "ccb1aa4136f35b7f24e201d367760c1e9eefea3fdab437d34f2a164125824e77",
+    "type": "AI-generated illustrative asset; not customer portrait",
+    "bytes": 182498
+  },
+  {
+    "asset": "mobility.webp",
+    "source": "mobility.png",
+    "dimensions": [
+      1122,
+      1402
+    ],
+    "sha256": "d2d9a33ca2883a60c5f283e9b897deeb1efa5f5d488bda24608dd48c28282e3a",
+    "type": "AI-generated illustrative asset; not customer portrait",
+    "bytes": 124714
+  },
+  {
+    "asset": "studio.webp",
+    "source": "quiet-gym.png",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "sha256": "254120854ef3d833f2bb2dfd16cb3f64853abf52109830977847781b75abb8a7",
+    "type": "AI-generated illustrative asset; not customer portrait",
+    "bytes": 213608
+  },
+  {
+    "asset": "routine.webp",
+    "source": "routine-runners.png",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "sha256": "46fd3ff8e5ac208d8a7b6ea71a60ed9cd8ce897e154f3ef8bd259f973b737102",
+    "type": "AI-generated illustrative asset; not customer portrait",
+    "bytes": 208126
+  },
+  {
+    "asset": "logo.webp",
+    "source": "logo-oxblood.png",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "sha256": "15e7bb75535b956dab819a88589890161d5886a7056e5585822ba9b6b0afc574",
+    "type": "AI-generated illustrative asset; not customer portrait",
+    "bytes": 19000
+  }
+]

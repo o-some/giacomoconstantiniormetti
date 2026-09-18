@@ -1,0 +1,5 @@
+reference-044.png
+qa/
+*.zip
+.DS_Store
+__pycache__/
